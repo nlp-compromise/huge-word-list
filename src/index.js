@@ -1,5 +1,5 @@
-const corpus = require('nlp-corpus')
-const efrt = require('efrt')
+const unpack = require('efrt-unpack')
+const packd = require('../_build')
 
-let wordList = ['fun', 'cool', 'cooldude', 'funny', 'wicket']
-console.log(efrt.pack(wordList))
+const allWords = Object.keys(unpack(packd))
+module.exports = allWords

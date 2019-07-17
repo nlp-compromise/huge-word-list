@@ -3,21 +3,17 @@
   "name": "huge-word-list",
   "description": "all english words, in compressed-form",
   "version": "0.0.1",
-  "main": "./builds/compromise.js",
-  "types": "./compromise.d.ts",
+  "main": "./builds/huge-word-list.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nlp-compromise/word-list.git"
+    "url": "git://github.com/nlp-compromise/huge-word-list.git"
   },
   "scripts": {
     "build": "rollup -c",
-    "watch": "amble ./scratch.js",
-    "coverage": "node ./scripts/postpublish/coverage.js"
+    "watch": "amble ./scratch.js"
   },
   "files": [
-    "builds/",
-    "docs/",
-    "compromise.d.ts"
+    "builds/"
   ],
   "prettier": {
     "trailingComma": "es5",
@@ -46,7 +42,8 @@
     "tape": "4.11.0"
   },
   "eslintIgnore": [
-    "builds/*.js"
+    "builds/*.js",
+    "_build.js"
   ],
   "license": "MIT"
 }
