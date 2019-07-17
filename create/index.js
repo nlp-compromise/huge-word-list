@@ -31,7 +31,7 @@ uniqWords = uniqWords.filter(w => {
     return false
   }
   //cannot have punctuation
-  if (/[;,.?!:()\[\]'"`“”‘~\{\}…]/.test(w)) {
+  if (/[;,.?!:()\[\]'"`“”‘~\{\}…\-=<>^’*—]/.test(w)) {
     return false
   }
   //must have some ascii letters
@@ -60,12 +60,31 @@ for (let i = 0; i < uniqWords.length; i++) {
   obj[uniqWords[i]] += 1
 }
 uniqWords = Object.keys(obj)
-console.log(uniqWords.length + ' words')
+uniqWords = uniqWords.sort()
+console.log(uniqWords.length.toLocaleString() + ' words')
 
 // console.log(uniqWords.join(' '))
 
 // let wordList = ['fun', 'cool', 'cooldude', 'funny', 'wicket']
 let packd = efrt.pack(uniqWords)
-// console.log(efrt.unpack(packd))
 // console.log(packd)
 fs.writeFileSync('./_build.js', 'module.exports=`' + packd + '`')
+
+let final = efrt.unpack(packd)
+console.log(final.spencer)
+console.log(final.about)
+console.log(final.improve)
+console.log(final.score)
+console.log(final.alert)
+console.log(final.favorite)
+console.log(final.favourite)
+console.log(final.alarmed)
+console.log(final.disgusting)
+console.log(final.disgusted)
+console.log(final.talk)
+console.log(final.talked)
+console.log(final.talks)
+console.log(final.talking)
+console.log(final.speaker)
+console.log(final.britain)
+console.log(final.abe)

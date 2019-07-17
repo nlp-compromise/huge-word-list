@@ -2,7 +2,7 @@
   "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
   "name": "huge-word-list",
   "description": "all english words, in compressed-form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./builds/huge-word-list.js",
   "repository": {
     "type": "git",
